@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@{
+    var food = new[]{
+        new{
+            foodItem="Burger",
+            Price="3.65$",
+            totalItems="1",
+        },
+        new{
+            foodItem="Spring Rolls",
+            Price="4.55$",
+            totalItems="4",
+        },
+        new{
+            foodItem="Veg Combo",
+            Price="12.85$",
+            totalItems="6",
+        },
+        new{
+           foodItem="Chicken Nuggets",
+            Price="8.00$",
+            totalItems="8",
+        },
+        new{
+            foodItem="Pizza",
+            Price="12.45$",
+            totalItems="1",
+        }
+    };
+}
+@for (var i = 0; i <food.Length; i++)
+{
+    var foodY =food[i];
+    <text>foodItem:<strong>@foodY.foodItem  <br/> </strong> </text>
+    <text>Price:@foodY.Price <br></text>
+    <text>Total Items:@foodY.totalItems <br></text>
+} 
