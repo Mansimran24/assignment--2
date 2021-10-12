@@ -1,6 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-namespace FoodDelivery.foodie
+namespace FoodDelivery.foodies
 {
     public class foodie
     {

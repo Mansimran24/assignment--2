@@ -13,20 +13,35 @@ namespace FoodDelivery
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
-            Configuration = configuration;
+         Environment = env;
+         Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment Environment { get; }
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+             if (Environment.IsDevelopment())
+             {
+
+            
 
             services.AddDbContext<fooddeliveryfoodContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("fooddeliveryfoodContext")));
+            options.UseSqlite(Configuration.GetConnectionString("fooddeliveryfoodContext")));
+             }
+             else
+             {
+              services.AddDbContext<fooddeliveryfoodContext>(options =>
+            options.UseServer(Configuration.GetConnectionString("fooddeliveryfoodContext")));
+
+
+             }
+             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +54,8 @@ namespace FoodDelivery
             else
             {
                 app.UseExceptionHandler("/Error");
+                app.UseHsts();
+
             }
 
             app.UseStaticFiles();

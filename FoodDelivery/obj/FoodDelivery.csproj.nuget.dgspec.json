@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\asp\\assignment--2\\FoodDelivery\\FoodDelivery.csproj": {}
+    "D:\\asp\\assignment--2\\fooddelivery\\FoodDelivery.csproj": {}
   },
   "projects": {
-    "D:\\asp\\assignment--2\\FoodDelivery\\FoodDelivery.csproj": {
+    "D:\\asp\\assignment--2\\fooddelivery\\FoodDelivery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\asp\\assignment--2\\FoodDelivery\\FoodDelivery.csproj",
+        "projectUniqueName": "D:\\asp\\assignment--2\\fooddelivery\\FoodDelivery.csproj",
         "projectName": "FoodDelivery",
-        "projectPath": "D:\\asp\\assignment--2\\FoodDelivery\\FoodDelivery.csproj",
+        "projectPath": "D:\\asp\\assignment--2\\fooddelivery\\FoodDelivery.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\asp\\assignment--2\\FoodDelivery\\obj\\",
+        "outputPath": "D:\\asp\\assignment--2\\fooddelivery\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"

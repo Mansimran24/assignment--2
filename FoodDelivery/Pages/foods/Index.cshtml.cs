@@ -18,7 +18,7 @@ namespace FoodDelivery.Pages_foods
             _context = context;
         }
 
-        public IList<dfoodie> foodie { get;set; }
+        public IList<foodie> foodie { get;set; }
 
         public async Task OnGetAsync()
         {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using FoodDelivery.foodie;
+using FoodDelivery.foodies;
 
 namespace FoodDelivery.Pages_foods
 {
@@ -24,7 +24,7 @@ namespace FoodDelivery.Pages_foods
         }
 
         [BindProperty]
-        public foodie foodie { get; set; }
+        public foodie foodies { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()

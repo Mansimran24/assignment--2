@@ -17,9 +17,11 @@ namespace FoodDelivery.Pages
             _logger = logger;
         }
 
-        public void OnGet()
-        {
+        public IList<FoodDelivery> FoodDelivery { get;set; }
 
+        public async Task OnGetAsync()
+        {
+            FoodDelivery = await _logger.FoodDelivery.ToListAsync();
         }
     }
 }
